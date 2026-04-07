@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="#0066cc"/>
+  <text x="100" y="32" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">PRO PUBLICO</text>
+  <text x="100" y="48" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">EU</text>
+</svg>
