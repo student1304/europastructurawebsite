@@ -664,9 +664,12 @@ a:hover {
    Contact Section
    ============================================ */
 
-.contact-content {
-    display: flex;
-    justify-content: center;
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .contact-card {
@@ -674,9 +677,12 @@ a:hover {
     padding: var(--spacing-3xl);
     border-radius: var(--radius-xl);
     text-align: center;
-    max-width: 600px;
     color: var(--color-white);
     box-shadow: var(--shadow-xl);
+}
+
+.contact-card-alt {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary-light));
 }
 
 .contact-icon {
@@ -704,6 +710,12 @@ a:hover {
     line-height: 1.7;
 }
 
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
 .contact-card .btn-primary {
     background: var(--color-white);
     color: var(--color-primary);
@@ -714,6 +726,24 @@ a:hover {
     background: var(--color-gray-100);
     border-color: var(--color-gray-100);
     color: var(--color-primary);
+}
+
+.contact-card .btn-secondary {
+    background: transparent;
+    color: var(--color-white);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-card .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+@media (max-width: 700px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================
@@ -926,6 +956,10 @@ a:hover {
 .partner-card:nth-child(5) { transition-delay: 0.25s; }
 .partner-card:nth-child(6) { transition-delay: 0.3s; }
 .partner-card:nth-child(7) { transition-delay: 0.35s; }
+
+/* Staggered animation for contact cards */
+.contact-card:nth-child(1) { transition-delay: 0.1s; }
+.contact-card:nth-child(2) { transition-delay: 0.2s; }
 
 /* ============================================
    Print Styles
