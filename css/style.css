@@ -524,18 +524,27 @@ a:hover {
    ============================================ */
 
 .research-content {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .research-card {
     background: var(--color-white);
-    padding: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
     border-radius: var(--radius-xl);
     border: 1px solid var(--color-gray-200);
     text-align: center;
-    max-width: 600px;
     box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-gray-300);
 }
 
 .research-icon {
@@ -551,7 +560,7 @@ a:hover {
 }
 
 .research-card h3 {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
     font-weight: 600;
     color: var(--color-primary);
     margin-bottom: var(--spacing-md);
@@ -956,6 +965,11 @@ a:hover {
 .partner-card:nth-child(5) { transition-delay: 0.25s; }
 .partner-card:nth-child(6) { transition-delay: 0.3s; }
 .partner-card:nth-child(7) { transition-delay: 0.35s; }
+
+/* Staggered animation for research cards */
+.research-card:nth-child(1) { transition-delay: 0.1s; }
+.research-card:nth-child(2) { transition-delay: 0.2s; }
+.research-card:nth-child(3) { transition-delay: 0.3s; }
 
 /* Staggered animation for contact cards */
 .contact-card:nth-child(1) { transition-delay: 0.1s; }
