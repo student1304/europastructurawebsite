@@ -580,36 +580,135 @@ a:hover {
    Publications Section
    ============================================ */
 
-.publications-content {
-    display: flex;
-    justify-content: center;
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.publications-placeholder {
-    text-align: center;
-    padding: var(--spacing-4xl) var(--spacing-xl);
-    background: var(--color-gray-100);
+.publications-card {
+    background: var(--color-white);
+    padding: var(--spacing-2xl);
     border-radius: var(--radius-xl);
-    border: 2px dashed var(--color-gray-300);
-    max-width: 500px;
-    width: 100%;
+    border: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
 }
 
-.placeholder-icon {
-    color: var(--color-gray-400);
+.publications-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-gray-300);
+}
+
+.publications-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--color-gray-100), var(--color-gray-50));
+    border-radius: var(--radius-lg);
+    color: var(--color-primary);
     margin-bottom: var(--spacing-lg);
 }
 
-.placeholder-text {
-    font-size: var(--font-size-2xl);
+.publications-card h3 {
+    font-size: var(--font-size-xl);
     font-weight: 600;
-    color: var(--color-gray-600);
+    color: var(--color-primary);
     margin-bottom: var(--spacing-sm);
 }
 
-.placeholder-subtext {
+.publications-card > p {
     font-size: var(--font-size-base);
+    color: var(--color-gray-600);
+    margin-bottom: var(--spacing-md);
+}
+
+.publications-coming-soon {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    background: rgba(49, 130, 206, 0.1);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.publications-card-scrollable .publications-list {
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: var(--spacing-sm);
+}
+
+.publications-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.publications-list::-webkit-scrollbar-track {
+    background: var(--color-gray-100);
+    border-radius: 3px;
+}
+
+.publications-list::-webkit-scrollbar-thumb {
+    background: var(--color-gray-300);
+    border-radius: 3px;
+}
+
+.publications-list::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-400);
+}
+
+.publication-item {
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+.publication-author {
+    display: block;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
     color: var(--color-gray-500);
+    margin-bottom: var(--spacing-xs);
+}
+
+.publication-title {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.4;
+    margin-bottom: var(--spacing-xs);
+    transition: color var(--transition-fast);
+}
+
+.publication-title:hover {
+    color: var(--color-accent);
+}
+
+.publication-source {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-400);
+    background: var(--color-gray-100);
+    padding: 2px var(--spacing-sm);
+    border-radius: var(--radius-sm);
+}
+
+@media (max-width: 700px) {
+    .publications-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================
@@ -933,7 +1032,7 @@ a:hover {
 .section:not(.hero) .about-text,
 .section:not(.hero) .feature-card,
 .section:not(.hero) .research-card,
-.section:not(.hero) .publications-placeholder,
+.section:not(.hero) .publications-card,
 .section:not(.hero) .partner-card,
 .section:not(.hero) .contact-card {
     opacity: 0;
@@ -945,7 +1044,7 @@ a:hover {
 .section:not(.hero) .about-text.visible,
 .section:not(.hero) .feature-card.visible,
 .section:not(.hero) .research-card.visible,
-.section:not(.hero) .publications-placeholder.visible,
+.section:not(.hero) .publications-card.visible,
 .section:not(.hero) .partner-card.visible,
 .section:not(.hero) .contact-card.visible {
     opacity: 1;
@@ -956,6 +1055,10 @@ a:hover {
 .feature-card:nth-child(1) { transition-delay: 0.1s; }
 .feature-card:nth-child(2) { transition-delay: 0.2s; }
 .feature-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Staggered animation for publications cards */
+.publications-card:nth-child(1) { transition-delay: 0.1s; }
+.publications-card:nth-child(2) { transition-delay: 0.2s; }
 
 /* Staggered animation for partner cards */
 .partner-card:nth-child(1) { transition-delay: 0.05s; }

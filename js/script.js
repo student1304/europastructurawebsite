@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .section:not(.hero) .about-text,
         .section:not(.hero) .feature-card,
         .section:not(.hero) .research-card,
-        .section:not(.hero) .publications-placeholder,
+        .section:not(.hero) .publications-card,
         .section:not(.hero) .partner-card,
         .section:not(.hero) .contact-card
     `);
