@@ -3,123 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Europa Structura AISBL - Independent research foundation advancing knowledge in technology and finance for the European Union.">
     <title>Europa Structura AISBL</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="section">
-        <div class="container header-container">
-            <div class="header-content">
-                <h1 class="title">Europa Structura AISBL</h1>
-                <button class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </button>
-                <nav class="navbar">
-                    <div class="navbar-menu">
-                        <a class="navbar-item" href="#home">Home</a>
-                        <a class="navbar-item" href="#about">About</a>
-                        <a class="navbar-item" href="#research">Research</a>
-                        <a class="navbar-item" href="#publications">Publications</a>
-                        <a class="navbar-item" href="#partners">Partners</a>
-                        <a class="navbar-item" href="#contact">Contact</a>
-                    </div>
-                </nav>
-            </div>
-            <img src="images/logo.png" alt="Europa Structura Logo" class="header-logo">
+    <header class="header">
+        <div class="header-inner">
+            <a href="#home" class="logo">
+                <img src="images/logo_transp.png" alt="Europa Structura" class="logo-img">
+                <span class="logo-text">Europa Structura</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#research">Research</a>
+                <a class="nav-link" href="#publications">Publications</a>
+                <a class="nav-link" href="#partners">Partners</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
-    <main class="section">
-        <div class="container">
-            <div id="home" class="content">
-                <h2 class="subtitle">Welcome to Europa Structura</h2>
-                <p>An independent research foundation advancing knowledge in technology and finance for the European Union.</p>
-            </div>
-            <div id="about" class="content">
-                <h2 class="subtitle">About Us</h2>
-                <p>The purpose of the Foundation is to conduct independent research and promote knowledge dissemination in the fields of technology and finance, with a particular emphasis on the European Union and its capital markets. The Foundation's research focuses on the impact and potential of emerging technologies—such as artificial intelligence, quantum technologies, and digital infrastructures—on financial systems, regulation, and policy development.</p>
-                <p>The Foundation seeks to enhance the education and informed decision-making of European policymakers, public institutions, and other stakeholders through its research, publications, and collaborative initiatives.</p>
-                <p><a href="#" id="infographic-link" class="button is-link">View Infographic</a></p>
-            </div>
-            <div id="research" class="content">
-                <h2 class="subtitle">Research</h2>
-                <p><a href="mailto:info@europa-structura.eu">Get in touch</a> with our research team. We're happy to discuss your research interests and explore potential collaborations.</p>
-            </div>
-            <div id="publications" class="content">
-                <h2 class="subtitle">Publications</h2>
-                <p>Coming soon!</p>
-            </div>
-            <div id="partners" class="content">
-                <h2 class="subtitle">Partners</h2>
-                <p>We are proud to collaborate with leading organizations across Europe:</p>
-                <div class="partners-grid">
-                    <div class="partner-logo">
-                        <a href="https://www.dentons.com" target="_blank" rel="noopener noreferrer">
-                            <img src="images/partners/dentons.svg" alt="Dentons Law Firm">
-                        </a>
-                    </div>
-                    <div class="partner-logo">
-                        <a href="https://pro-publico.eu" target="_blank" rel="noopener noreferrer">
-                            <img src="images/partners/propublico.svg" alt="Pro Publico EU">
-                        </a>
-                    </div>
-                    <div class="partner-logo">
-                        <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">
-                            <img src="images/partners/cloudflare.svg" alt="Cloudflare">
-                        </a>
-                    </div>
-                    <div class="partner-logo">
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                            <img src="images/partners/github.svg" alt="GitHub">
-                        </a>
-                    </div>
-                    <div class="partner-logo">
-                        <a href="https://www.citedesassociations.be" target="_blank" rel="noopener noreferrer">
-                            <img src="images/partners/citedesassociations.svg" alt="Cité des Associations">
-                        </a>
-                    </div>
-                    <div class="partner-logo">
-                        <a href="https://technology-institute.eu" target="_blank" rel="noopener noreferrer">
-                            <img src="images/partners/technology-institute.svg" alt="Technology Institute EU">
-                        </a>
-                    </div>
-                    <div class="partner-logo">
-                        <a href="https://www.stiftungfairekapitalmaerkte.de/" target="_blank" rel="noopener noreferrer">
-                            <img src="images/partners/stiftungfairekapitalmaerkte.svg" alt="Stiftung Faire Kapitalmärkte">
-                        </a>
+
+    <main>
+        <section id="home" class="section hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-eyebrow">Independent Research Foundation</p>
+                    <h1 class="hero-title">Welcome to Europa Structura</h1>
+                    <p class="hero-subtitle">An independent research foundation advancing knowledge in technology and finance for the European Union.</p>
+                    <div class="hero-actions">
+                        <a href="#about" class="btn btn-primary">Learn More</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
                 </div>
             </div>
-            <div id="contact" class="content">
-                <h2 class="subtitle">Contact</h2>
-                <p><a href="mailto:info@europa-structura.eu">Get in touch</a></p>
+            <div class="hero-bg"></div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Us</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>The purpose of the Foundation is to conduct independent research and promote knowledge dissemination in the fields of technology and finance, with a particular emphasis on the European Union and its capital markets. The Foundation's research focuses on the impact and potential of emerging technologies—such as artificial intelligence, quantum technologies, and digital infrastructures—on financial systems, regulation, and policy development.</p>
+                        <p>The Foundation seeks to enhance the education and informed decision-making of European policymakers, public institutions, and other stakeholders through its research, publications, and collaborative initiatives.</p>
+                        <a href="#" id="infographic-link" class="btn btn-outline">View Infographic</a>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                            </div>
+                            <h3>Independent Research</h3>
+                            <p>Unbiased analysis and insights on emerging technologies</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            </div>
+                            <h3>Knowledge Dissemination</h3>
+                            <p>Publications and initiatives for informed decision-making</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h3>Policy Focus</h3>
+                            <p>Supporting European policymakers and institutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Research</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="research-content">
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                        </div>
+                        <h3>Collaborate With Us</h3>
+                        <p><a href="mailto:info@europa-structura.eu">Get in touch</a> with our research team. We're happy to discuss your research interests and explore potential collaborations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Publications</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="publications-content">
+                    <div class="publications-placeholder">
+                        <div class="placeholder-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        </div>
+                        <p class="placeholder-text">Coming soon!</p>
+                        <p class="placeholder-subtext">Our research publications will be available here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Partners</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">We are proud to collaborate with leading organizations across Europe:</p>
+                </div>
+                <div class="partners-grid">
+                    <a href="https://www.dentons.com" target="_blank" rel="noopener noreferrer" class="partner-card">
+                        <img src="images/partners/dentons.svg" alt="Dentons Law Firm">
+                    </a>
+                    <a href="https://pro-publico.eu" target="_blank" rel="noopener noreferrer" class="partner-card">
+                        <img src="images/partners/propublico.svg" alt="Pro Publico EU">
+                    </a>
+                    <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer" class="partner-card">
+                        <img src="images/partners/cloudflare.svg" alt="Cloudflare">
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="partner-card">
+                        <img src="images/partners/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://www.citedesassociations.be" target="_blank" rel="noopener noreferrer" class="partner-card">
+                        <img src="images/partners/citedesassociations.svg" alt="Cité des Associations">
+                    </a>
+                    <a href="https://technology-institute.eu" target="_blank" rel="noopener noreferrer" class="partner-card">
+                        <img src="images/partners/technology-institute.svg" alt="Technology Institute EU">
+                    </a>
+                    <a href="https://www.stiftungfairekapitalmaerkte.de/" target="_blank" rel="noopener noreferrer" class="partner-card">
+                        <img src="images/partners/stiftungfairekapitalmaerkte.svg" alt="Stiftung Faire Kapitalmärkte">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <h3>Get in Touch</h3>
+                        <p>We'd love to hear from you. Reach out to discuss research collaborations, partnerships, or general inquiries.</p>
+                        <a href="mailto:info@europa-structura.eu" class="btn btn-primary">info@europa-structura.eu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo_transp.png" alt="Europa Structura" class="footer-logo">
+                    <p class="footer-tagline">Independent research for Europe's digital future.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Social Media</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Europa Structura AISBL. All rights reserved.</p>
             </div>
         </div>
-    </main>
-    <footer class="footer has-background-light">
-        <div class="content has-text-centered">
-            <p>
-                &copy; 2026 Europa Structura AISBL |
-                <a href="#">Social Media</a> |
-                <a href="#">Newsletter</a> |
-                <a href="#">Sitemap</a>
-            </p>
-        </div>
     </footer>
-    
-    <!-- Infographic Modal -->
+
     <div id="infographic-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <p class="image">
-                <img src="images/infographic.png" alt="Europa Structura Infographic">
-            </p>
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <img src="images/infographic.png" alt="Europa Structura Infographic">
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
     </div>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>
